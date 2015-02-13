@@ -11,13 +11,63 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210063339) do
+ActiveRecord::Schema.define(version: 20150213222821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "input_types", force: :cascade do |t|
+    t.string   "descr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "option_choices", force: :cascade do |t|
+    t.integer  "question_id"
+    t.integer  "option_type_id"
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "option_types", force: :cascade do |t|
+    t.string   "descr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questionaire_sections", force: :cascade do |t|
+    t.integer  "questionaire_template_id"
+    t.string   "name"
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "required_yn",              limit: 1
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
   create_table "questionaire_templates", force: :cascade do |t|
-    t.jsonb    "doc"
+    t.string   "name"
+    t.text     "instructions"
+    t.text     "comments"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer  "question_section_id"
+    t.string   "name"
+    t.string   "subtext"
+    t.integer  "input_type_id"
+    t.integer  "unit_type_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "unit_types", force: :cascade do |t|
+    t.string   "descr"
+    t.string   "abbr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
