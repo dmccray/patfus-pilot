@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+    	<th><%= @questionnaire_template.name %></th>
+  	</tr>
+ <% @questionnaire_template.questionnaire_sections.each do |section| -%>
+	<tr>
+		<td><%= section.name %></td>
+		<td><%= link_to 'Edit', edit_questionnaire_template_questionnaire_section_path(@questionnaire_template, section) %></td>
+	</tr>
+	
+
+<% end -%>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<%= link_to 'Create New Section', new_questionnaire_template_questionnaire_section_path(@questionnaire_template) %>
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+<%= link_to 'Edit', edit_questionnaire_template_path(@questionnaire_template) %> |
+<%= link_to 'Back', questionnaire_templates_path %>

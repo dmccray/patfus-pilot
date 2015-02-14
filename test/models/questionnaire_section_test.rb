@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class QuestionaireTemplateTest < ActiveSupport::TestCase
+class QuestionnaireSectionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing questionnaire Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questionnaire_templates.each do |questionnaire_template| %>
+      <tr>
+        <td><%= questionnaire_template.name %></td>
+        <td><%= link_to 'Show', questionnaire_template %></td>
+        <td><%= link_to 'Edit', edit_questionnaire_template_path(questionnaire_template) %></td>
+        <td><%= link_to 'Destroy', questionnaire_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New questionnaire template', new_questionnaire_template_path %>

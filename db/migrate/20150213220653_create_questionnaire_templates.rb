@@ -1,6 +1,6 @@
-class CreateQuestionaireTemplates < ActiveRecord::Migration
+class CreateQuestionnaireTemplates < ActiveRecord::Migration
   def change
-    create_table 	:questionaire_templates do |t|
+    create_table 	:questionnaire_templates do |t|
       t.string		:name
       t.text		:instructions
       t.text		:comments

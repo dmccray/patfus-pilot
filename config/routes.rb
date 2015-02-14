@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :questionaire_templates do
-    resources :questionaire_sections
+  resources :questionnaire_templates do
+    resources :questionnaire_sections
   end
 
   resources :unit_types

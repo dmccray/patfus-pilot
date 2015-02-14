@@ -1,10 +1,10 @@
-<%= form_for(@questionaire_template) do |f| %>
-  <% if @questionaire_template.errors.any? %>
+<%= form_for(@questionnaire_template) do |f| %>
+  <% if @questionnaire_template.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@questionaire_template.errors.count, "error") %> prohibited this questionaire_template from being saved:</h2>
+      <h2><%= pluralize(@questionnaire_template.errors.count, "error") %> prohibited this questionnaire_template from being saved:</h2>
 
       <ul>
-      <% @questionaire_template.errors.full_messages.each do |message| %>
+      <% @questionnaire_template.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

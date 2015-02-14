@@ -36,17 +36,17 @@ ActiveRecord::Schema.define(version: 20150213222821) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "questionaire_sections", force: :cascade do |t|
-    t.integer  "questionaire_template_id"
+  create_table "questionnaire_sections", force: :cascade do |t|
+    t.integer  "questionnaire_template_id"
     t.string   "name"
     t.string   "title"
     t.string   "subtitle"
-    t.string   "required_yn",              limit: 1
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.string   "required_yn",               limit: 1
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
-  create_table "questionaire_templates", force: :cascade do |t|
+  create_table "questionnaire_templates", force: :cascade do |t|
     t.string   "name"
     t.text     "instructions"
     t.text     "comments"
@@ -56,13 +56,13 @@ ActiveRecord::Schema.define(version: 20150213222821) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.integer  "question_section_id"
+    t.integer  "questionnaire_sections_id"
     t.string   "name"
     t.string   "subtext"
     t.integer  "input_type_id"
     t.integer  "unit_type_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "unit_types", force: :cascade do |t|
