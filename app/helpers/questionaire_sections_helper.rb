@@ -1,0 +1,2 @@
+module QuestionaireSectionsHelper
+end

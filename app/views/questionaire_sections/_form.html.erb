@@ -1,0 +1,36 @@
+<%= form_for([@qt, @questionaire_section]) do |f| %>
+  <% if @questionaire_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@questionaire_section.errors.count, "error") %> prohibited this questionaire_section from being saved:</h2>
+
+      <ul>
+      <% @questionaire_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.select :required_yn, [["Yes", "Y"], ["No", "N"]] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

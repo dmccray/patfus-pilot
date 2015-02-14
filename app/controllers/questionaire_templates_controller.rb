@@ -69,6 +69,6 @@ class QuestionaireTemplatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def questionaire_template_params
-      params[:questionaire_template]
+      params.require(:questionaire_template).permit(:name, :instructions, :comments)
     end
 end

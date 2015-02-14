@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @unit_type.descr %>
+</p>
+
+<p>
+  <strong>Abbr:</strong>
+  <%= @unit_type.abbr %>
+</p>
+
+<%= link_to 'Edit', edit_unit_type_path(@unit_type) %> |
+<%= link_to 'Back', unit_types_path %>

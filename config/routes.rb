@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :questionaire_templates
+  
+  resources :questionaire_templates do
+    resources :questionaire_sections
+  end
+
+  resources :unit_types
+  resources :input_types
+  resources :option_types
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
