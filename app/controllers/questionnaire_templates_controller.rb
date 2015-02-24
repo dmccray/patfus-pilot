@@ -5,6 +5,9 @@ class QuestionnaireTemplatesController < ApplicationController
   # GET /questionnaire_templates.json
   def index
     @questionnaire_templates = QuestionnaireTemplate.all
+
+    flash.now[:notice] = "This is a test"
+
   end
 
   # GET /questionnaire_templates/1
@@ -69,6 +72,6 @@ class QuestionnaireTemplatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def questionnaire_template_params
-      params.require(:questionnaire_template).permit(:name, :instructions, :comments)
+      params.require(:questionnaire_template).permit(:name, :qt_type_id, :instructions, :comments)
     end
 end

@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Patfus</title>
+<head charset="utf-8">
+  <title>Patient Follow Up System</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<%= render 'layouts/header' %>
+
+	<% if notice %>
+		<p class="notification notice">
+			<%= notice %>
+		</p>
+	<% end %>
+
+	<% if alert %>
+		<p class="notification alert">
+			<%= alert %>
+		</p>
+	<% end %>
+
+
+	<div class="container">
+		<section id="content">
+			<%= yield %>	
+		</section>
+
+		<!--
+		<section id="sidebar">
+			<%= yield :sidebar %>
+			<section id="recent_activity"> 
+				<header><h1 class="ir" id="recent">Recent Activities</h1></header>
+
+			</section>
+		</section>
+		-->
+
+	</div>
+	<br/><br/>
+
+	<%= render 'layouts/footer' %>
 
 </body>
 </html>
