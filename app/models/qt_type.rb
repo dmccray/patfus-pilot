@@ -1,3 +1,3 @@
 class QtType < ActiveRecord::Base
-	belongs_to :questionnaire_template
+	has_many :questionnaire_templates
 end

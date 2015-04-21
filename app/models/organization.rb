@@ -1,4 +1,4 @@
 class Organization < ActiveRecord::Base
-  has_one :organization_type
+  belongs_to :organization_type
   has_many :users
 end

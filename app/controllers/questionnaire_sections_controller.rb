@@ -1,4 +1,5 @@
 class QuestionnaireSectionsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :load_questionnaire_template
   before_action :set_questionnaire_section, only: [:show, :edit, :update, :destroy]
   

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+
 	<%= render 'layouts/header' %>
 
 	<div class="container">
@@ -24,19 +26,7 @@
 			</p>
 		<% end %>
 	
-		<section id="content">
-			<%= yield %>	
-		</section>
-
-		<!--
-		<section id="sidebar">
-			<%= yield :sidebar %>
-			<section id="recent_activity"> 
-				<header><h1 class="ir" id="recent">Recent Activities</h1></header>
-
-			</section>
-		</section>
-		-->
+		<%= yield %>
 
 	</div>
 	<br/><br/>

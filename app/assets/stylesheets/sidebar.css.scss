@@ -40,6 +40,10 @@ section#sidebar {
 
 	#recent_activity {
 		header {
+			font: {
+				size: 0.8em;
+			}
+			color: #000000;
 			background-color: #bc471d;
 			border-bottom: 5px solid #807c77;
 			margin: 10px -10px;
@@ -48,7 +52,26 @@ section#sidebar {
 				//background: transparent url('/assets/txt-recent-activity.png') no-repeat scroll top left;
 				margin: 5px 0 0 0;
 				padding: 0;
-				text-indent: -999px;
+				//text-indent: -9px;
+			}
+		}
+	}
+
+	#patient_list {
+		header {
+			font: {
+				size: 0.8em;
+			}
+			color: #000000;
+			background-color: #bc471d;
+			border-bottom: 5px solid #807c77;
+			margin: 10px -10px;
+			padding: 5px 10px 0 10px;
+			h1#recent {
+				//background: transparent url('/assets/txt-recent-activity.png') no-repeat scroll top left;
+				margin: 5px 0 0 0;
+				padding: 0;
+				//text-indent: -9px;
 			}
 		}
 	}

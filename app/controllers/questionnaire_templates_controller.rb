@@ -1,4 +1,5 @@
-class QuestionnaireTemplatesController < ApplicationController
+class QuestionnaireTemplatesController < ApplicationController\
+  before_filter :authenticate_user!
   before_action :set_questionnaire_template, only: [:show, :edit, :update, :destroy]
 
   # GET /questionnaire_templates

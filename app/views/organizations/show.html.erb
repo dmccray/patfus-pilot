@@ -1,14 +1,25 @@
-<p id="notice"><%= notice %></p>
+<section id="dashboard">
+	<%= yield :dashboard%> 
+</section>
+<section id="campaigns">
+	<%= yield :campaigns%> 
+</section>	
 
-<p>
-  <strong>Name:</strong>
-  <%= @organization.name %>
-</p>
+<section id="sidebar">
+	<%= yield :sidebar %>
+	<section id="recent_activity"> 
+		<header><h1 class="ir" id="recent">Recent Activities</h1></header>
+			 <%= render partial: 'activity_items/recent' %> 
+	</section>
 
-<p>
-  <strong>Organization type:</strong>
-  <%= @organization.organization_type %>
-</p>
+	<section id="patient_list">
+		<header><h1 class="ir" id="recent">Patient List</h1></header>
+			<%= render partial: 'activity_items/patient_list' %>
+	</section>
+</section>
+	
 
+<!-- Admin only
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
+-->

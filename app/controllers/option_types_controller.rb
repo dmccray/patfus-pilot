@@ -1,4 +1,5 @@
 class OptionTypesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_option_type, only: [:show, :edit, :update, :destroy]
 
   # GET /option_types

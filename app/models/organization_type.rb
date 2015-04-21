@@ -1,3 +1,3 @@
 class OrganizationType < ActiveRecord::Base
-	belongs_to :organization
+	has_many :organizations
 end

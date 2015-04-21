@@ -1,3 +1,3 @@
 class OptionType < ActiveRecord::Base
-	belongs_to	:option_choice
+	has_many	:option_choices
 end

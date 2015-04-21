@@ -2,6 +2,7 @@
 	<nav id="utility">
 		<p>
 		<% if user_signed_in? %>
+			<strong><%= current_user.organization.name %></strong><br />
 			You are logged in as <strong><%= current_user.email %></strong>
 			<%= link_to "[Your Account]", edit_user_registration_path %>
 			<%= link_to "[Logout]", destroy_user_session_path, method: :delete %>

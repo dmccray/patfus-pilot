@@ -1,4 +1,5 @@
 class InputTypesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_input_type, only: [:show, :edit, :update, :destroy]
 
   # GET /input_types
